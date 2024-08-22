@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./App.css";
 import Square from "./components/Square";
 import Button from "./components/Button";
+import Header from "./components/Header";
 
 function App() {
   const [color, setColor] = useState("");
@@ -10,11 +11,8 @@ function App() {
 
   return (
     <div className="App">
-      <Square
-        color={color}
-        invertColor={invertColor}
-        hex={hex}
-      />
+      <Header />
+      <Square color={color} invertColor={invertColor} hex={hex} />
       <Button
         color={color}
         setColor={setColor}

@@ -1,9 +1,10 @@
 import React from "react";
 import colorNames from "colornames";
+import "../App.css";
 
 const Button = ({ color, setColor, invertColor, setInvertColor, setHex }) => {
   return (
-    <form onSubmit={(e) => e.preventDefault()}>
+    <form onSubmit={(e) => e.preventDefault()} className="form">
       <input
         type="text"
         value={color}
@@ -16,7 +17,7 @@ const Button = ({ color, setColor, invertColor, setInvertColor, setHex }) => {
         id="color-input"
         name="color-input"
       />
-      <button onClick={() => setInvertColor(!invertColor)}>Button</button>
+      <button onClick={() => setInvertColor(!invertColor)}>Invert</button>
     </form>
   );
 };
