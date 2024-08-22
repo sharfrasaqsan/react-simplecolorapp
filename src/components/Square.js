@@ -1,7 +1,7 @@
 import React from "react";
 import "../App.css";
 
-const Square = ({ color, invertColor }) => {
+const Square = ({ color, invertColor, hex }) => {
   return (
     <section className="square-section">
       <div
@@ -12,6 +12,7 @@ const Square = ({ color, invertColor }) => {
         }}
       >
         <p>{color ? color : "Empty Value"}</p>
+        <p>{hex ? hex : null}</p>
       </div>
     </section>
   );
